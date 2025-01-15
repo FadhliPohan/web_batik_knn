@@ -15,11 +15,59 @@
     <link rel="stylesheet" href="assets_modern/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" />
     <link href="assets/css/demo.css" rel="stylesheet" />
 
-    <title>Sensor</title>
+    <title>BATIK</title>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <!-- <div class="preloader">
-        <img src="assets_modern/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
-    </div> -->
+
+<?php
+if (version_compare(phpversion(), "5.3.0", ">=")  == 1)
+  error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+else
+  error_reporting(E_ALL & ~E_NOTICE);
+?>
+<?php
+session_start();
+//error_reporting(0);
+require_once "konmysqli.php";
+
+$mnu = "";
+if (isset($_GET["mnu"])) {
+  $mnu = $_GET["mnu"];
+}
+
+date_default_timezone_set("Asia/Jakarta");
+
+
+if (!isset($_SESSION["cid"])) {
+  die("<script>location.href='login.php'</script>");
+}
+
+$kp1 = "Januari";
+$kp2 = "Februari";
+$kp3 = "Maret";
+$kp4 = "April";
+$kp5 = "Mei";
+$kp6 = "Juni";
+$kp7 = "Juli";
+$kp8 = "Agustus";
+$kp9 = "September";
+$kp10 = "Oktober";
+$kp11 = "November";
+$kp12 = "Desember";
+
+$ks1 = "Jan";
+$ks2 = "Feb";
+$ks3 = "Mar";
+$ks4 = "Apr";
+$ks5 = "Mei";
+$ks6 = "Jun";
+$ks7 = "Jul";
+$ks8 = "Agu";
+$ks9 = "Sep";
+$ks10 = "Okt";
+$ks11 = "Nov";
+$ks12 = "Des";
+
+?>
+

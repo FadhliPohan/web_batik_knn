@@ -18,89 +18,48 @@
 
             <nav class="sidebar-nav scroll-sidebar" data-simplebar>
                 <ul id="sidebarnav">
-                    <!-- ---------------------------------- -->
-                    <!-- Home -->
-                    <!-- ---------------------------------- -->
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">Home</span>
+                        <span class="hide-menu">All Menu</span>
                     </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="home.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-dashboard"></i>
-                            </span>
-                            <span class="hide-menu">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="monitoring.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-heart-rate-monitor"></i>
-                            </span>
-                            <span class="hide-menu">Monitoring</span>
-                        </a>
-                    </li>
-                    <!-- <li class="sidebar-item">
-                        <a class="sidebar-link" href="perhitungan.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-ruler-measure"></i>
-                            </span>
-                            <span class="hide-menu">Rule Based Combination</span>
-                        </a>
-                    </li> -->
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="perhitungan_segitiga.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-triangles"></i>
-                            </span>
-                            <span class="hide-menu">Rule Based Triangle</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="hasilnya.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-report-analytics"></i>
-                            </span>
-                            <span class="hide-menu">Data Results</span>
-                        </a>
-                    </li>
+                    <?php
+                    function renderMenuItem($mnu, $menuName, $displayName, $iconClass)
+                    {
+                        $activeClass = ($mnu == $menuName) ? "class='active'" : "";
+                        return "  
+                        <li class='sidebar-item' $activeClass>  
+                            <a class='sidebar-link' href='index.php?mnu=$menuName' aria-expanded='false'>  
+                                <span>  
+                                    <i class='$iconClass'></i>  
+                                </span>  
+                                <span class='hide-menu'>$displayName</span>  
+                            </a>  
+                        </li>";
+                    }
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="laporan.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-presentation"></i>
-                            </span>
-                            <span class="hide-menu">Report</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="grafik_penyiraman.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-chart-infographic"></i>
-                            </span>
-                            <span class="hide-menu">Chart</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="data_user.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-users"></i>
-                            </span>
-                            <span class="hide-menu">User Data</span>
-                        </a>
-                    </li>
-                    <!-- <li class="sidebar-item">
-                        <a class="sidebar-link" href="logout.php" aria-expanded="false">
-                            <span>
-                                <i class="ti ti-shopping-cart"></i>
-                            </span>
-                            <span class="hide-menu">Logout</span>
-                        </a>
-                    </li> -->
-
+                    if ($_SESSION["cstatus"] == "Super Admin") {
+                        echo renderMenuItem($mnu, "home", "Home", "ti ti-home");
+                        echo renderMenuItem($mnu, "user", "Pengguna", "ti ti-user");
+                        echo renderMenuItem($mnu, "toko", "Toko", "ti ti-brand-appgallery");
+                        echo renderMenuItem($mnu, "penjualan", "Penjualan", "ti ti-shopping-cart");
+                        echo renderMenuItem($mnu, "pengujian", "Pengujian", "ti ti-check");
+                        echo renderMenuItem($mnu, "knn", "Analisa", "ti ti-graph");
+                        echo renderMenuItem($mnu, "logout", "Logout", "ti ti-logout");
+                    } else if ($_SESSION["cstatus"] == "Staf Admin") {
+                        echo renderMenuItem($mnu, "home", "Home", "ti ti-home");
+                        echo renderMenuItem($mnu, "profil", "Profil Pengguna", "ti ti-user");
+                        echo renderMenuItem($mnu, "_toko", "Toko", "ti ti-store");
+                        echo renderMenuItem($mnu, "_penjualan", "Penjualan", "ti ti-shopping-cart");
+                        echo renderMenuItem($mnu, "_pengujian", "Pengujian", "ti ti-check");
+                        echo renderMenuItem($mnu, "logout", "Logout", "ti ti-logout");
+                    } else {
+                        echo renderMenuItem($mnu, "home", "Home", "ti ti-home");
+                        echo "<li class='sidebar-item'><a class='sidebar-link' href='login.php' aria-expanded='false'>Login</a></li>";
+                    }
+                    ?>
                 </ul>
             </nav>
+
 
             <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded sidebar-ad mt-3">
                 <div class="hstack gap-3">
