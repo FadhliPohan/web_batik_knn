@@ -1,87 +1,87 @@
 <?php
 session_start();
 require_once "konmysqli.php";
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
 
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="login/images/icons/favicon.ico" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="login/css/main.css">
-	<!--===============================================================================================-->
+	<!-- Required meta tags -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Favicon icon-->
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo_sensor.png" />
+
+	<!-- Core Css -->
+	<link rel="stylesheet" href="assets_modern/css/styles.css" />
+
+	<title>Penjualan Batik dengan KNN</title>
 </head>
 
 <body>
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
-				<form class="login100-form validate-form" method="post" action="">
-					<span class="login100-form-title p-b-55">
-						Login
-					</span>
-
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
-						<input class="input100" type="text" name="user" id="user" placeholder="Username">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-envelope"></span>
-						</span>
+	<!-- Preloader -->
+	<div class="preloader">
+		<img src="assets/img/logo_sensor.png" alt="loader" class="lds-ripple img-fluid" />
+	</div>
+	<div id="main-wrapper">
+		<div class="position-relative overflow-hidden radial-gradient min-vh-100 w-100">
+			<div class="position-relative z-index-5">
+				<div class="row">
+					<div class="col-xl-7 col-xxl-8">
+						<a href="../main/index.html" class="text-nowrap logo-img d-block px-4 py-9 w-100">
+							<img src="assets/img/logo_sensor.png" class="dark-logo" alt="Logo-Dark" style="height: 70px;" />
+							<img src="assets/img/logo_sensor.png" class="light-logo" alt="Logo-light" style="height: 70px;" />
+						</a>
+						<div class="d-none d-xl-flex align-items-center justify-content-center" style="height: calc(100vh - 80px);">
+							<img src="assets_modern/images/backgrounds/login-security.svg" alt="" class="img-fluid" width="500">
+						</div>
 					</div>
+					<div class="col-xl-5 col-xxl-4">
+						<div class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
+							<div class="col-sm-8 col-md-6 col-xl-9">
+								<h2 class="mb-3 fs-7 fw-bolder">Selamat Datang Di Batik</h2>
+								<p class=" mb-9">Silahkan Lakukan Login</p>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" id="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-lock"></span>
-						</span>
+								<form  method="post">
+									<div class="mb-3">
+										<label for="exampleInputEmail1" class="form-label">Username</label>
+										<input type="text" class="form-control" name="user" id="user" aria-describedby="emailHelp">
+									</div>
+									<div class="mb-4">
+										<label for="exampleInputPassword1" class="form-label">Password</label>
+										<input type="password" class="form-control" name="pass" id="pass">
+									</div>
+
+									<button type="submit" class="btn btn-primary w-100 py-8 mb-4 rounded-2" name="Login" id="Login">Sign In</button>
+
+								</form>
+							</div>
+						</div>
 					</div>
-
-
-
-					<div class="container-login100-form-btn p-t-25">
-						<button class="login100-form-btn" name="Login" id="Login" value="Login">
-							Login
-						</button>
-						<input type="hidden" value="<?php echo $gid_tahun_ajaran; ?>" name="id_tahun_ajaran">
-					</div>
-
-
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="dark-transparent sidebartoggler"></div>
+	<!-- Import Js Files -->
 
-	<!--===============================================================================================-->
-	<script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="login/vendor/bootstrap/js/popper.js"></script>
-	<script src="login/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="login/vendor/select2/select2.min.js"></script>
-	<!--===============================================================================================-->
+	<script src="assets_modern/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets_modern/js/app.min.js"></script>
+	<script src="assets_modern/js/app.init.js"></script>
+	<script src="assets_modern/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets_modern/libs/simplebar/dist/simplebar.min.js"></script>
+
+	<script src="assets_modern/js/sidebarmenu.js"></script>
+	<script src="assets_modern/js/theme.js"></script>
+
 	<script src="login/js/main.js"></script>
 
+
 </body>
+
 
 </html>
 
