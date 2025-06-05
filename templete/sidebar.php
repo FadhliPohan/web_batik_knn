@@ -7,8 +7,8 @@
             <!-- ---------------------------------- -->
             <div class="brand-logo d-flex align-items-center justify-content-between">
                 <a href="#" class="text-nowrap logo-img">
-                    <img src="assets/img/logo_sensor.png" class="dark-logo" alt="Logo-Dark" style="height: 70px;" />
-                    <img src="assets/img/logo_sensor.png" class="light-logo" alt="Logo-light" style="height: 70px;" />
+                    <img src="assets/img/sistemKKN.png" class="dark-logo" alt="Logo-Dark" style="height: 70px;" />
+                    <img src="assets/img/sistemKKN.png" class="light-logo" alt="Logo-light" style="height: 70px;" />
                 </a>
                 <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
                     <i class="ti ti-x"></i>
@@ -41,7 +41,7 @@
                         echo renderMenuItem($mnu, "home", "Home", "ti ti-home");
                         echo renderMenuItem($mnu, "user", "Pengguna", "ti ti-user");
                         echo renderMenuItem($mnu, "toko", "Toko", "ti ti-brand-appgallery");
-                        echo renderMenuItem($mnu, "penjualan", "Penjualan", "ti ti-shopping-cart");
+                        echo renderMenuItem($mnu, "penjualan", "Persediaan", "ti ti-shopping-cart");
                         echo renderMenuItem($mnu, "pengujian", "Pengujian", "ti ti-check");
                         echo renderMenuItem($mnu, "knn", "Analisa", "ti ti-graph");
                         echo renderMenuItem($mnu, "logout", "Logout", "ti ti-logout");
@@ -104,7 +104,7 @@
                     </ul>
 
                     <div class="d-block d-lg-none">
-                        <img src="assets/img/logo_sensor.png" width="180" alt="" />
+                        <img src="assets/img/sistemKKN.png" width="180" alt="" />
                     </div>
                     <a class="navbar-toggler nav-icon-hover p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="p-2">
@@ -362,8 +362,8 @@
                         </li>
                         <li class="nav-item d-none d-xl-block">
                             <a href="../main/index.html" class="text-nowrap nav-link">
-                                <img src="assets/img/logo_sensor.png" class="dark-logo" width="180" alt="" />
-                                <img src="assets/img/logo_sensor.png" class="light-logo" width="180" alt="" />
+                                <img src="assets/img/sistemKKN.png" class="dark-logo" width="180" alt="" />
+                                <img src="assets/img/sistemKKN.png" class="light-logo" width="180" alt="" />
                             </a>
                         </li>
                         <li class="nav-item d-none d-xl-block">
@@ -539,7 +539,7 @@
                     </ul>
                     <div class="d-block d-xl-none">
                         <a href="../main/index.html" class="text-nowrap nav-link">
-                            <img src="assets/img/logo_sensor.png" width="180" alt="" />
+                            <img src="assets/img/sistemKKN.png" width="180" alt="" />
                         </a>
                     </div>
                     <a class="navbar-toggler nav-icon-hover p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

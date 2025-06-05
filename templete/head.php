@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/png" href="assets/img/logo_sensor.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/sistemKKN.png" />
 
     <!-- Core Css -->
     <link rel="stylesheet" href="assets_modern/css/styles.css" />
     <link rel="stylesheet" href="assets_modern/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" />
     <link href="assets/css/demo.css" rel="stylesheet" />
+    
 
     <title>BATIK</title>
 </head>

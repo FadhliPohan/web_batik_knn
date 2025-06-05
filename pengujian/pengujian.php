@@ -71,13 +71,13 @@ if(isset($_GET["pro"]) && $_GET["pro"]=="ubah"){
   <link rel="stylesheet" href="resources/demos/style.css">
 <script src="jsacordeon/jquery-1.12.4.js"></script>
   <script src="jsacordeon/jquery-ui.js"></script>
-  <script>
+  <!-- <script>
   $( function() {
     $( "#accordion" ).accordion({
       collapsible: true
     });
   } );
-  </script>
+  </script> -->
 	
 	
     <div id="accordion">
