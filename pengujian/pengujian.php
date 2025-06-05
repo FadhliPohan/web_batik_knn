@@ -178,12 +178,12 @@ $arr=getData($conn,$sql);
 <td>
 <td>
 <td colspan="2">
-<input name="Simpan" type="submit" id="Simpan" value="Simpan" />
+<input name="Simpan" class="btn btn-primary" type="submit" id="Simpan" value="Simpan" />
 <input name="pro" type="hidden" id="pro" value="<?php echo $pro;?>" />
 
 <input name="id_pengujian" type="hidden" id="id_pengujian" value="<?php echo $id_pengujian;?>" />
 <input name="id_pengujian0" type="hidden" id="id_pengujian0" value="<?php echo $id_pengujian0;?>" />
-<a href="?mnu=pengujian"><input name="Batal" type="button" id="Batal" value="Batal" /></a>
+<a href="?mnu=pengujian"><input  class="btn btn-danger" name="Batal" type="button" id="Batal" value="Batal" /></a>
 </td></tr>
 </table>
 </form>
